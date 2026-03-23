@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>For My Everything</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#FDFBF7] touch-none">
+
+    <!-- SITE FRAME BORDERS -->
+    <div class="border-line border-top"></div>
+    <div class="border-line border-bottom"></div>
+    <div class="border-line border-left"></div>
+    <div class="border-line border-right"></div>
+
+    <canvas id="heartCanvas"></canvas>
+
+    <!-- RED INVERTING CURSOR -->
+    <div id="custom-cursor">
+        <svg viewBox="0 0 32 32">
+            <path d="M16,28.261c0,0-14-7.926-14-17.046c0-9.356,13.159-10.399,14-0.454c0.841-9.945,14-8.902,14,0.454 C30,20.335,16,28.261,16,28.261z"/>
+        </svg>
+    </div>
+
+    <!-- HIDDEN DRAWER NAV -->
+    <div class="nav-drawer-wrapper">
+        <div class="nav-handle"><div class="handle-text">MENU</div></div>
+        <nav class="nav-content">
+            <div class="nav-item" onclick="scrollToSec('#hero')"><span>Top</span></div>
+            <div class="nav-item" onclick="scrollToSec('#scroll-sec')"><span>The Note</span></div>
+            <div class="nav-item" onclick="scrollToSec('#reasons-sec')"><span>11 Reasons</span></div>
+            <div class="nav-item" onclick="scrollToSec('#memories-sec')"><span>Memories</span></div>
+        </nav>
+    </div>
+
+    <!-- HERO -->
+    <section id="hero" class="panel">
+        <div class="hero-box px-4">
+            <h1 class="serif text-5xl md:text-8xl text-red-800">Hi <span class="italic text-red-600">Beautiful.</span></h1>
+            <p class="serif text-sm md:text-xl uppercase tracking-[0.2em] md:tracking-[0.4em] mt-6 opacity-60">This is for you...</p>
+        </div>
+    </section>
+
+    <!-- letter -->
+    <section id="scroll-sec" class="panel min-h-screen py-20">
+        <p class="instruction text-xs md:text-base px-6 text-center mb-6">Scroll down on the paper...</p>
+        <div class="paper-container mx-auto" id="paperUnfoldArea">
+            <div class="crumpled-overlay"></div>
+            <div class="unfolding-paper">
+                <div class="scroll-content">
+                    <h2 class="script text-4xl md:text-6xl text-red-800 mb-8">To My Absolute Everything,</h2>
+                    
+                    <div class="letter-text serif text-lg md:text-xl leading-relaxed text-gray-800 space-y-6">
+                        <p class="indent-p">"I know people don’t usually fall in love this fast… but I did. And I think it’s because you’re genuinely the sweetest, most caring, and most beautiful person I’ve ever met.</p>
+
+                        <p class="indent-p">I want you to understand something clearly—you are not a replacement for anyone. Not even close. You are so much more, and I don’t want my past to have any place in a future where I only see you. What I feel for you is real, and it’s yours alone.</p>
+
+                        <p class="indent-p">I truly love you. I care about you deeply, and I would do anything I can to see you happy. You mean more to me than I can even explain, and I hope you never doubt that.</p>
+
+                        <p class="indent-p">I think about you all the time—literally every day—and I mean it when I say you’re the most beautiful girl I’ve ever seen. Not just how you look, but everything about you.</p>
+
+                        <p class="indent-p">This is just me trying to show you how much you matter to me, and maybe, even a little, take away that feeling that you’re anything less than everything to me.</p>
+
+                        <p class="indent-p font-bold text-red-800 italic">Because to me… you are everything."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11 reasons why ana b7bha -->
+    <section id="reasons-sec" class="py-20 md:py-32 px-6 md:px-10">
+        <h2 class="serif text-4xl md:text-6xl text-center mb-12 md:mb-20 text-red-900">11 Reasons Why You Are The Best</h2>
+        <div class="reasons-grid">
+            <div class="reason-card r-dark"><div class="tape"></div><h3>01. You truly care about me</h3><p>And it lights up my world.</p></div>
+            <div class="reason-card r-light"><div class="tape"></div><h3>02. your Voice</h3><p>Your voice is like music to my ears and i mean it wallahy.</p></div>
+            <div class="reason-card r-dark"><div class="tape"></div><h3>03. your eyes</h3><p>your amazing eyes that i just stare at my homescreen to look at.</p></div>
+            <div class="reason-card r-light"><div class="tape"></div><h3>04. Laugh</h3><p>your laugh makes my heart fultter btw.</p></div>
+            <div class="reason-card r-dark"><div class="tape"></div><h3>05. TEEZEK</h3><p>This one doesnt need much explaining.</p></div>
+            <div class="reason-card r-light"><div class="tape"></div><h3>06. you’re mature</h3><p>you know how to handle things.</p></div>
+            <div class="reason-card r-dark"><div class="tape"></div><h3>07. Your lips</h3><p>your lips are perfect and super kissable.</p></div>
+            <div class="reason-card r-light"><div class="tape"></div><h3>08. you're funny</h3><p>you have great sense of humor  and always know how to cheer me up.</p></div>
+            <div class="reason-card r-dark"><div class="tape"></div><h3>09. your looks</h3><p>you’re like eye candy to me, i could look at you all day and still admire you.</p></div>
+            <div class="reason-card r-light"><div class="tape"></div><h3>10. you make me feel comfortable</h3><p>you always make sure i feel comfortable.</p></div>
+            <div class="reason-card r-dark"><div class="tape"></div><h3>11. You</h3><p>Just simply<ul>you</ul>and the things about you, and i put you first intentionally.</p></div>
+        </div>
+    </section>
+
+    <!-- MEMORIES GALLERY -->
+    <section id="memories-sec" class="py-20 md:py-32">
+        <h2 class="serif text-4xl md:text-6xl text-center mb-12 md:mb-16 text-red-900 px-4">Our Memories (hope we make millions more mll)</h2>
+        <div class="gallery-grid">
+            <div class="photo-tab"><img src="one.jpeg" alt=""><p>Us</p></div>
+            <div class="photo-tab"><img src="two.jpeg" alt=""><p>Us again</p></div>
+            <div class="photo-tab"><img src="three.jpeg" alt=""><p>us us us</p></div>
+            <div class="photo-tab"><img src="four.jpeg" alt=""><p><3</p></div>
+            <div class="photo-tab"><img src="five.jpeg" alt=""><p><3<3</p></div>
+            <div class="photo-tab"><img src="six.jpeg" alt=""><p></p></div>
+            <div class="photo-tab"><img src="seven.jpeg" alt=""><p></p></div>
+            <div class="photo-tab"><img src="eight.jpeg" alt=""><p></p></div>
+            <div class="photo-tab"><img src="nine.jpeg" alt=""><p></p></div>
+            <div class="photo-tab"><img src="ussss.png" alt=""><p>one of the best pics we have</p></div>
+        </div>
+    </section>
+
+    <!-- PROPOSAL -->
+    <section id="final-ask" class="panel">
+        <div class="proposal-container text-center relative w-full px-4">
+            <h1 class="script text-6xl md:text-9xl text-red-700 mb-12 md:mb-24 z-10">Will you be my girlfriend?</h1>
+            <div class="btn-wrap flex flex-col md:flex-row gap-8 md:gap-32 justify-center items-center relative w-full min-h-[300px]">
+                <button id="yesBtn" class="yes-button z-20">YES!</button>
+                <button id="noBtn" class="no-button z-20">No</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUCCESS SCREEN -->
+    <div id="success-screen" class="success-overlay">
+        <button id="closeSuccess" class="close-btn">×</button>
+        <h1 class="script text-white text-[15vw] md:text-[10vw]">I Love You. ❤️</h1>
+        <p class="serif text-white text-xl md:text-2xl mt-4">To millions more memories...</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
