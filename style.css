@@ -96,3 +96,72 @@ canvas { position: fixed; inset: 0; z-index: -2; pointer-events: none; }
 .panel { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; }
 .serif { font-family: 'Playfair Display', serif; }
 .script { font-family: 'Dancing Script', cursive; }
+/* COUNTDOWN CAPSULE STYLING */
+#secret-capsule {
+    position: fixed;
+    bottom: 45px; /* Offset from the bottom border */
+    left: 45px;   /* Offset from the left border */
+    z-index: 2001; /* Above the frame, below the cursor */
+    color: #B91C1C;
+    opacity: 0.5;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    pointer-events: none;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.capsule-label {
+    display: block;
+    font-size: 0.5rem;
+    margin-bottom: 2px;
+    opacity: 0.8;
+}
+
+#countdown-timer {
+    font-variant-numeric: tabular-nums;
+}
+
+/* Ensure mobile compatibility for the timer */
+@media (max-width: 768px) {
+    #secret-capsule {
+        bottom: 25px;
+        left: 25px;
+        font-size: 0.55rem;
+    }
+}
+/* ADDED: BIG COUNTDOWN STYLING */
+#countdown-sec {
+    background: linear-gradient(to bottom, transparent, rgba(185, 28, 28, 0.03));
+}
+
+.timer-block {
+    min-width: 80px;
+    text-align: center;
+}
+
+.unit-label {
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.7rem;
+    color: #B91C1C;
+    margin-top: 10px;
+    display: block;
+    font-weight: 600;
+}
+
+#big-days, #big-hours, #big-minutes, #big-seconds {
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+}
+
+@media (max-width: 768px) {
+    .timer-sep { display: none; }
+    .timer-block { width: 45%; margin-bottom: 20px; }
+}
+
+/* Ensure smooth transition for reveal */
+#countdown-wrapper {
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease;
+}
