@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>For My Everything</title>
+    <!-- Professional Tools -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
@@ -116,6 +117,37 @@
                 <button id="yesBtn" class="yes-button z-20">YES!</button>
                 <button id="noBtn" class="no-button z-20">No</button>
             </div>
+        </div>
+    </section>
+
+    <!-- ADDED: GRADUAL REVEAL BIG COUNTDOWN -->
+    <section id="countdown-sec" class="panel min-h-screen py-20 px-6 flex flex-col items-center justify-center">
+        <div id="countdown-wrapper" class="text-center opacity-0 scale-95 translate-y-10">
+            <h2 class="serif text-xl md:text-3xl uppercase tracking-[0.4em] text-red-900 opacity-60 mb-12">The Countdown to Forever</h2>
+            
+            <div class="flex flex-wrap justify-center gap-4 md:gap-12">
+                <div class="timer-block">
+                    <span id="big-days" class="serif text-5xl md:text-9xl block font-bold text-[#332]">00</span>
+                    <span class="unit-label">Days</span>
+                </div>
+                <div class="timer-sep serif text-5xl md:text-9xl opacity-20">:</div>
+                <div class="timer-block">
+                    <span id="big-hours" class="serif text-5xl md:text-9xl block font-bold text-[#332]">00</span>
+                    <span class="unit-label">Hours</span>
+                </div>
+                <div class="timer-sep serif text-5xl md:text-9xl opacity-20">:</div>
+                <div class="timer-block">
+                    <span id="big-minutes" class="serif text-5xl md:text-9xl block font-bold text-[#332]">00</span>
+                    <span class="unit-label">Minutes</span>
+                </div>
+                <div class="timer-sep serif text-5xl md:text-9xl opacity-20">:</div>
+                <div class="timer-block">
+                    <span id="big-seconds" class="serif text-5xl md:text-9xl block font-bold text-red-600">00</span>
+                    <span class="unit-label">Seconds</span>
+                </div>
+            </div>
+            
+            <p class="serif italic text-lg md:text-2xl mt-16 text-gray-400">Waiting for u to guess what this is..</p>
         </div>
     </section>
 
