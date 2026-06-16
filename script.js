@@ -149,3 +149,49 @@ document.getElementById('closeSuccess').addEventListener('click', () => {
 });
 
 function scrollToSec(id) { gsap.to(window, { duration: 1.2, scrollTo: id, ease: "power3.inOut" }); }
+/* ADDED: BIG COUNTDOWN LOGIC */
+const targetDate = new Date("June 23, 2026 00:00:00").getTime();
+
+function updateBigTimer() {
+    const now = new Date().getTime();
+    const diff = targetDate - now;
+
+    const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+    const format = (n) => n.toString().padStart(2, '0');
+
+    const daysEl = document.getElementById("big-days");
+    const hoursEl = document.getElementById("big-hours");
+    const minsEl = document.getElementById("big-minutes");
+    const secsEl = document.getElementById("big-seconds");
+
+    if (daysEl) daysEl.innerText = format(d);
+    if (hoursEl) hoursEl.innerText = format(h);
+    if (minsEl) minsEl.innerText = format(m);
+    if (secsEl) secsEl.innerText = format(s);
+
+    if (diff < 0) {
+        document.getElementById("countdown-wrapper").innerHTML = "<h1 class='script text-8xl text-red-700'>Our Time is Now</h1>";
+    }
+}
+
+// Update timer every second
+setInterval(updateBigTimer, 1000);
+updateBigTimer();
+
+/* ADDED: GRADUAL REVEAL ON SCROLL */
+gsap.to("#countdown-wrapper", {
+    scrollTrigger: {
+        trigger: "#final-ask", // Reveal starts after passing the proposal section
+        start: "bottom center",
+        end: "bottom top",
+        scrub: 1, // Tied directly to scroll progress
+    },
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    ease: "none"
+});
