@@ -150,7 +150,7 @@ document.getElementById('closeSuccess').addEventListener('click', () => {
 
 function scrollToSec(id) { gsap.to(window, { duration: 1.2, scrollTo: id, ease: "power3.inOut" }); }
 /* ADDED: BIG COUNTDOWN LOGIC */
-const targetDate = new Date("June 23, 2026 00:00:00").getTime();
+const targetDate = new Date("March 23, 2027 00:00:00").getTime();
 
 function updateBigTimer() {
     const now = new Date().getTime();
